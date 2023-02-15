@@ -64,6 +64,9 @@ namespace REG_MARK_LIB
             string str = new string(mark);
             return new string(mark);
         }
-
+        public int GetCombinationsCountInRange(string mark1, string mark2)
+        {
+            //(10 ^ 3 - (start + end) * 11 ^ 3) + 10 ^ 3 - (start + end)
+        }
     }
 }
