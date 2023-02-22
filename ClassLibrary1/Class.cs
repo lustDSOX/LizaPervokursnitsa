@@ -66,7 +66,17 @@ namespace REG_MARK_LIB
         }
         public int GetCombinationsCountInRange(string mark1, string mark2)
         {
-            //(10 ^ 3 - (start + end) * 11 ^ 3) + 10 ^ 3 - (start + end)
+            if (!CheckMark(mark1) && !CheckMark(mark2))
+                return 0;
+            double s = 0;
+            double e = 0;
+            for (int i = 0; i < 2; i++)
+            {
+                s += int.Parse(mark1[i + 1].ToString()) * Math.Pow(10, 2 - i);
+                e += int.Parse(mark2[i + 1].ToString()) * Math.Pow(10, 2 - i);
+            }
+            int answer = (int)((e - s + 2) * 1000);
+            return answer;
         }
     }
 }

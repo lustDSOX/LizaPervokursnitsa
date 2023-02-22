@@ -13,7 +13,7 @@ namespace ConsoleApp
         {
             var calc = new Class();
             string text = "а999аа999";
-            string answer = calc.GetNextMarkAfterInRange(text, "а400аа999","а400аа999");
+            int answer = calc.GetCombinationsCountInRange("а100аа999", "а500аа999");
             Console.WriteLine(answer);
             Console.ReadKey();
         }
