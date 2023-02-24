@@ -75,7 +75,7 @@ namespace REG_MARK_LIB
                 s += int.Parse(mark1[i + 1].ToString()) * Math.Pow(10, 2 - i);
                 e += int.Parse(mark2[i + 1].ToString()) * Math.Pow(10, 2 - i);
             }
-            int answer = (int)((e - s + 2) * 1000);
+            int answer = (int)((e - s) * 1000);
             return answer;
         }
     }
